@@ -12,7 +12,8 @@ os.makedirs(out, exist_ok=True)
 def ts(s):
     return int(datetime.strptime(s.strip(), '%Y%m%d%H%M%S %z').timestamp())
 
-raw = urllib.request.urlopen(src, timeout=120) if src.startswith('http') else open(src, 'rb')
+# сервер провайдера отвечает 403 на дефолтный агент python-urllib, представляемся своим именем
+raw = urllib.request.urlopen(urllib.request.Request(src, headers={'User-Agent': 'm3uwatch-epg/1.0'}), timeout=120) if src.startswith('http') else open(src, 'rb')
 progs, root, n = {}, None, 0
 with gzip.GzipFile(fileobj=raw) as f:
     for ev, el in ET.iterparse(f, events=('start', 'end')):
