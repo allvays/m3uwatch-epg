@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>m3uwatch</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<object id="av-player" type="application/avplayer"></object>
+<div id="panel">
+  <div id="groups"></div>
+  <div id="channels">
+    <div id="list"></div>
+    <div id="now"></div>
+  </div>
+  <div id="hint">◀ группы &nbsp; ▲▼ выбор &nbsp; OK играть &nbsp; <span class="y">●</span> избранное &nbsp; RETURN видео</div>
+</div>
+<div id="osd">
+  <div id="osd-ch"></div>
+  <div id="osd-prog"></div>
+  <div id="osd-bar"><i></i></div>
+</div>
+<script src="$WEBAPIS/webapis/webapis.js"></script>
+<script src="config.js"></script>
+<script src="m3u.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

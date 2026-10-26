@@ -1,0 +1,31 @@
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+body { font: 32px/1 sans-serif; color: #eee; }
+#av-player { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+#panel { position: absolute; left: 0; top: 0; bottom: 0; width: 1060px; padding: 30px 0 0; box-sizing: border-box;
+         background: rgba(0,0,0,.82); display: none; }
+#panel.on { display: block; }
+#groups { position: absolute; left: 0; top: 30px; width: 380px; border-right: 1px solid #333; }
+#channels { position: absolute; left: 380px; top: 30px; width: 680px; }
+.row { height: 62px; line-height: 62px; padding: 0 24px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #bbb; }
+#groups .row { font-size: 28px; }
+#groups .row small { color: #777; font-size: 22px; }
+.row.sel { color: #fff; }
+.row.focus { background: #ffb400; color: #000; }
+.row.focus small { color: #553a00; }
+#panel.g #channels .row.focus { background: #333; color: #fff; }
+#panel.c #groups .row.focus { background: #333; color: #fff; }
+.row.now { color: #fff; font-weight: bold; }
+.row.now:before { content: '▶ '; }
+.row.fav:after { content: ' ★'; color: #ffb400; }
+.row.focus.fav:after { color: #553a00; }
+#now { height: 60px; line-height: 60px; padding: 0 24px; font-size: 26px; color: #ffb400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#hint { position: absolute; bottom: 20px; left: 24px; font-size: 22px; color: #777; }
+#hint .y { color: #ffd400; }
+#osd { position: absolute; right: 40px; top: 40px; min-width: 420px; max-width: 900px; padding: 18px 28px; background: rgba(0,0,0,.72);
+       border-radius: 8px; display: none; }
+#osd.on { display: block; }
+#osd-ch { font-size: 36px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#osd-prog { margin-top: 10px; font-size: 26px; color: #ccc; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#osd-prog:empty, #osd-bar.off { display: none; }
+#osd-bar { margin-top: 12px; height: 6px; background: #444; border-radius: 3px; }
+#osd-bar i { display: block; height: 6px; width: 0; background: #ffb400; border-radius: 3px; }

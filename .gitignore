@@ -1,0 +1,11 @@
+# Плейлист провайдера содержит персональный токен
+playlist.m3u
+# Сборки и служебное
+Debug/
+Release/
+.buildResult/
+.tizen-rds/
+.vscode/
+.DS_Store
+# Выход нарезки EPG при локальном запуске
+out/
